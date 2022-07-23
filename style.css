@@ -1,0 +1,107 @@
+:root {
+    --primary-color:hwb(32 0% 4%);
+    --secondary-color: #000000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: var(--primary-color);
+    font: bold 2rem "Open Sans", sans-serif;
+}
+
+.ToDo {
+    display: flex;
+    width: 50vw;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    gap: 15px;
+}
+
+.ToDo_Title {
+    display: flex;
+    background-color: #000;
+    width: 100%;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    box-shadow: 1px 1px 5px rgb(0, 0, 0);
+    font-size: 3rem;
+    color: white;
+}
+
+.ToDo_List {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.ToDo_Item {
+    display: flex;
+    width: 100%;
+    height: 60px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    box-shadow: 1px 1px 5px #000;
+    background-color: #ffffff;
+}
+
+.ToDo_Item > div {
+    width: 80%;
+}
+
+.ToDo_Item:hover {
+    cursor: pointer;
+    transition: all .5s ease;
+    background-color: #000;
+    color: white;
+}
+
+.ToDo_Item > input[type='text'] {
+    border: none;
+    width: 80%;
+    font: inherit;
+}
+
+.ToDo_Item > input[type='button'],
+.ToDo_Item > input[type='checkbox'] {
+    width: 30px;
+    height: 30px;
+    font: inherit;
+}
+
+.ToDo_Item > input[type='checkbox']:checked + div {
+    text-decoration: line-through;
+}
+
+.ToDo_New-Item {
+    display: flex;
+    background-color:white;
+    width: 100%;
+    height: 70px;
+    justify-content: space-evenly;
+    padding: 10px 0;
+    box-shadow: 1px 1px 5px #000;
+    margin: 10px;
+    font: inherit
+}
+
+.ToDo_New-Item > input {
+    background-color: white;
+    border: none;
+    width: 80%;
+    outline: none;
+    font: inherit;
+}
